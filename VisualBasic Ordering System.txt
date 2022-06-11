@@ -1,0 +1,294 @@
+Public Class frmChefandSpice
+    Dim combocontents As String
+    Dim quantity As Integer
+    Dim price As Decimal
+
+
+
+    Private Sub cmbStarter_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cmbStarter.SelectedIndexChanged
+
+        quantity = nmStarter.Value
+        combocontents = cmbStarter.Text
+        Me.Refresh()
+        If combocontents = "Samosas" Then
+            price = 1.5 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "Chicken Tikka" Then
+            price = 3.4 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "Chicken Tandoori" Then
+            price = 3.2 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "King Prawns" Then
+            price = 5.4 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "Onion Bhaji" Then
+            price = 3.2 * quantity
+            txtStarterPrice.Text = price
+        Else
+            price = 3.6 * quantity
+            txtStarterPrice.Text = price
+        End If
+
+    End Sub
+
+
+
+    Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
+
+        Dim a As Decimal
+        a = txtTotal.Text
+
+        If a = 0 Then
+            MsgBox("The Order is not finished, you must click on Calculate Total", MsgBoxStyle.Critical, "No Total")
+        Else
+            PrintForm1.Print()
+        End If
+
+    End Sub
+
+
+
+    Private Sub btnHelp_Click(sender As System.Object, e As System.EventArgs) Handles btnHelp.Click
+
+        Dim oForm As frmHelp
+        oForm = New frmHelp()
+        oForm.Show()
+        oForm = Nothing
+
+    End Sub
+
+
+    Private Sub nmStarter_ValueChanged(sender As System.Object, e As System.EventArgs) Handles nmStarter.ValueChanged
+
+        quantity = nmStarter.Value
+        combocontents = cmbStarter.Text
+        Me.Refresh()
+        If combocontents = "Samosas" Then
+            price = 1.5 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "Chicken Tikka" Then
+            price = 3.4 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "Chicken Tandoori" Then
+            price = 3.2 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "King Prawns" Then
+            price = 5.4 * quantity
+            txtStarterPrice.Text = price
+        ElseIf combocontents = "Onion Bhaji" Then
+            price = 3.2 * quantity
+            txtStarterPrice.Text = price
+        Else
+            price = 3.6 * quantity
+            txtStarterPrice.Text = price
+        End If
+
+    End Sub
+
+
+
+    Private Sub cmbMain_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cmbMain.SelectedIndexChanged
+
+        quantity = nmMain.Value
+        combocontents = cmbMain.Text
+        Me.Refresh()
+        If combocontents = "Chicken Curry" Then
+            price = 4.99 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Chicken Jalfrezi" Then
+            price = 3.75 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Donnor Kebab" Then
+            price = 3.5 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Lamb Chops" Then
+            price = 5.5 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Lamb Curry" Then
+            price = 5.5 * quantity
+            txtMainPrice.Text = price
+        Else
+            price = 3.6 * quantity
+            txtMainPrice.Text = price
+        End If
+
+
+    End Sub
+
+
+    Private Sub cmbExtra_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cmbExtra.SelectedIndexChanged
+
+        quantity = nmExtra.Value
+        combocontents = cmbExtra.Text
+        Me.Refresh()
+        If combocontents = "Chicken Burger" Then
+            price = 3.75 * quantity
+            txtExtraPrice.Text = price
+        ElseIf combocontents = "Fries" Then
+            price = 2.0 * quantity
+            txtExtraPrice.Text = price
+        ElseIf combocontents = "Garlic Bread" Then
+            price = 1.25 * quantity
+            txtExtraPrice.Text = price
+        ElseIf combocontents = "Lamb Burger" Then
+            price = 3.75 * quantity
+            txtExtraPrice.Text = price
+        Else
+            price = 1.0 * quantity
+            txtExtraPrice.Text = price
+        End If
+
+    End Sub
+
+
+
+    Private Sub cmbDrink_SelectedIndexChanged(sender As System.Object, e As System.EventArgs) Handles cmbDrink.SelectedIndexChanged
+
+        quantity = nmDrink.Value
+        combocontents = cmbDrink.Text
+        Me.Refresh()
+        If combocontents = "J2O" Then
+            price = 1.95 * quantity
+            txtDrinkPrice.Text = price
+        ElseIf combocontents = "Red Bull" Then
+            price = 2.1 * quantity
+            txtDrinkPrice.Text = price
+        Else
+            price = 0.7 * quantity
+            txtDrinkPrice.Text = price
+        End If
+
+
+    End Sub
+
+
+
+    Private Sub nmMain_ValueChanged(sender As System.Object, e As System.EventArgs) Handles nmMain.ValueChanged
+
+        quantity = nmMain.Value
+        combocontents = cmbMain.Text
+        Me.Refresh()
+        If combocontents = "Chicken Curry" Then
+            price = 4.99 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Chicken Jalfrezi" Then
+            price = 3.75 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Donnor Kebab" Then
+            price = 3.5 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Lamb Chops" Then
+            price = 5.5 * quantity
+            txtMainPrice.Text = price
+        ElseIf combocontents = "Lamb Curry" Then
+            price = 5.5 * quantity
+            txtMainPrice.Text = price
+        Else
+            price = 3.6 * quantity
+            txtMainPrice.Text = price
+        End If
+
+
+    End Sub
+
+
+    Private Sub nmExtra_ValueChanged(sender As System.Object, e As System.EventArgs) Handles nmExtra.ValueChanged
+
+        quantity = nmExtra.Value
+        combocontents = cmbExtra.Text
+        Me.Refresh()
+        If combocontents = "Chicken Burger" Then
+            price = 3.75 * quantity
+            txtExtraPrice.Text = price
+        ElseIf combocontents = "Fries" Then
+            price = 2.0 * quantity
+            txtExtraPrice.Text = price
+        ElseIf combocontents = "Garlic Bread" Then
+            price = 1.25 * quantity
+            txtExtraPrice.Text = price
+        ElseIf combocontents = "Lamb Burger" Then
+            price = 3.75 * quantity
+            txtExtraPrice.Text = price
+        Else
+            price = 1.0 * quantity
+            txtExtraPrice.Text = price
+        End If
+
+    End Sub
+
+
+    Private Sub nmDrink_ValueChanged(sender As System.Object, e As System.EventArgs) Handles nmDrink.ValueChanged
+
+        quantity = nmDrink.Value
+        combocontents = cmbDrink.Text
+        Me.Refresh()
+        If combocontents = "J2O" Then
+            price = 1.95 * quantity
+            txtDrinkPrice.Text = price
+        ElseIf combocontents = "Red Bull" Then
+            price = 2.1 * quantity
+            txtDrinkPrice.Text = price
+        Else
+            price = 0.7 * quantity
+            txtDrinkPrice.Text = price
+        End If
+
+    End Sub
+
+
+    Private Sub btnReset_Click(sender As System.Object, e As System.EventArgs) Handles btnReset.Click
+
+        cmbStarter.Text = "Choose Starter"
+        cmbMain.Text = "Choose Main Meal"
+        cmbExtra.Text = "Choose Extras"
+        cmbDrink.Text = "Choose Drinks"
+        nmStarter.Value = 0
+        nmMain.Value = 0
+        nmExtra.Value = 0
+        nmDrink.Value = 0
+        txtStarterPrice.Text = 0.0
+        txtMainPrice.Text = 0.0
+        txtExtraPrice.Text = 0.0
+        txtDrinkPrice.Text = 0.0
+        txtTotal.Text = 0.0
+
+    End Sub
+
+
+    Private Sub btnQuit_Click(sender As System.Object, e As System.EventArgs) Handles btnQuit.Click
+
+        Dim msg As String
+        Dim title As String
+        Dim style As MsgBoxStyle
+        Dim response As MsgBoxResult
+
+        msg = "Are you sure you want to quit the application?"
+        style = MsgBoxStyle.YesNo
+        title = "Quit Confirmation"
+
+        response = MsgBox(msg, style, title)
+
+        If response = MsgBoxResult.Yes Then
+            Me.Close()
+        End If
+
+    End Sub
+
+
+
+
+    Private Sub btnTotal_Click(sender As System.Object, e As System.EventArgs) Handles btnTotal.Click
+
+        Dim starterPrice, mainPrice, extraPrice, drinkPrice, total As Decimal
+        starterPrice = txtStarterPrice.Text
+        mainPrice = txtMainPrice.Text
+        extraPrice = txtExtraPrice.Text
+        drinkPrice = txtDrinkPrice.Text
+        total = starterPrice + mainPrice + extraPrice + drinkPrice
+        txtTotal.Text = total
+
+    End Sub
+
+
+End Class
